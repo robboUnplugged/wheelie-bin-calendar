@@ -17,7 +17,7 @@ jobs:
         shell: pwsh
         env:
           BIN_URL: ${{ secrets.BIN_URL }}
-        run: ./Update-BinCalendar.ps1
+        run: ./Get-WheelieBinCalendar.ps1
 
       - name: Commit updated calendar
         run: |
