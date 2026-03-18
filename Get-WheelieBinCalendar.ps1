@@ -15,7 +15,7 @@ This script uses the BIN_URL environment variable.
 
 .EXAMPLE
 $env:BIN_URL = "your-url-here"
-.\Update-BinCalendar.ps1
+.\Get-WheelieBinCalendar.ps1
 
 .NOTES
 Author: robboUnplugged
@@ -23,6 +23,7 @@ Created: 2026-03-17
 
 Do not commit your BIN_URL to source control.
 #>
+
 # Get URL from environment (GitHub secret)
 $url = $env:BIN_URL
 
