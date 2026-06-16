@@ -35,7 +35,7 @@ Write-Host "Fetching bin data..."
 
 # Get AJAX data
 $response = Invoke-RestMethod $url
-$html = $response[1].data
+$html = ($response | Where-Object { $_.command -eq "insert" } | Select-Object -First 1).data
 
 # Decode HTML
 Add-Type -AssemblyName System.Web
